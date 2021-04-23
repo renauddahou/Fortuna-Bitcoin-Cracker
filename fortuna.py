@@ -78,7 +78,7 @@ def public_key_to_address(public_key):
 def get_balance(address):
     
     try:
-        response = requests.get("https://chain.api.btc.com/v3/address/" + str(address))
+        response = requests.get("https://sochain.com/api/v2/address/BTC/" + str(address))
         return float(response.json()['data']['balance']) 
     except:
         return -1
